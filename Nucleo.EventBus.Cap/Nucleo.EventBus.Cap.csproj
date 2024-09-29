@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Nucleo.EventBus\Nucleo.EventBus.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="DotNetCore.CAP" Version="8.2.0" />
     <PackageReference Include="DotNetCore.CAP.Dashboard" Version="8.2.0" />
     <PackageReference Include="DotNetCore.CAP.MongoDB" Version="8.2.0" />
