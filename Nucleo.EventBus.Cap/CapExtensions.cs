@@ -29,4 +29,14 @@ public static class CapEventExtension
 
         services.AddSingleton<IEventBus, CapEventBus>();
     }
+
+    public static void AddCapEventBus(this IServiceCollection services,DotNetCore.CAP.CapOptions options)
+    {
+        services.AddCap(opt => 
+        {
+            opt = options;
+        });
+
+        services.AddSingleton<IEventBus, CapEventBus>();
+    } 
 }

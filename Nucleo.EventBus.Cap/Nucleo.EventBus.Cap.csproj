@@ -12,7 +12,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>8.0.1</Version>
+    <Version>8.0.2</Version>
     <PackageId>Nucleo.EventBus.Cap</PackageId>
     <Authors>hamit</Authors>
     <Company>hamit</Company>
