@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleo.EventBus", "Nucleo.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleo.EventBus.Cap", "Nucleo.EventBus.Cap\Nucleo.EventBus.Cap.csproj", "{131949D4-8E09-4A93-8D7F-B87DEE972E0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nucleo.DDD.Application", "Nucleo.DDD.Application\Nucleo.DDD.Application.csproj", "{C2169B3E-40AB-4C6A-8DF7-667C19316B5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleo.DDD.Application", "Nucleo.DDD.Application\Nucleo.DDD.Application.csproj", "{C2169B3E-40AB-4C6A-8DF7-667C19316B5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nucleo.DDD.CrossCuttingConcerns", "Nucleo.DDD.CrossCuttingConcerns\Nucleo.DDD.CrossCuttingConcerns.csproj", "{F2A2E03B-60DF-4E56-92F6-00159405A6B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleo.DDD.CrossCuttingConcerns", "Nucleo.DDD.CrossCuttingConcerns\Nucleo.DDD.CrossCuttingConcerns.csproj", "{F2A2E03B-60DF-4E56-92F6-00159405A6B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nucleo.Data", "Nucleo.Data\Nucleo.Data.csproj", "{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,18 @@ Global
 		{F2A2E03B-60DF-4E56-92F6-00159405A6B5}.Release|x64.Build.0 = Release|Any CPU
 		{F2A2E03B-60DF-4E56-92F6-00159405A6B5}.Release|x86.ActiveCfg = Release|Any CPU
 		{F2A2E03B-60DF-4E56-92F6-00159405A6B5}.Release|x86.Build.0 = Release|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Debug|x64.Build.0 = Debug|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Debug|x86.Build.0 = Debug|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Release|x64.ActiveCfg = Release|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Release|x64.Build.0 = Release|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Release|x86.ActiveCfg = Release|Any CPU
+		{4C48D2BD-2491-416E-AA71-5BBE8E0A2A36}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
