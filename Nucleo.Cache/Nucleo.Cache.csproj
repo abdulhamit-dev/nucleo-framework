@@ -4,6 +4,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>8.0.0</Version>
+    <PackageId>Nucleo.Cache</PackageId>
+    <Authors>hamit</Authors>
+    <Company>hamit</Company>
+    <Description>cache</Description>
+    <PackageTags>nucleo;cache</PackageTags>
+    <RepositoryUrl>https://github.com/abdulhamit-dev/nucleo-framework/tree/main/Nucleo.Cache</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
