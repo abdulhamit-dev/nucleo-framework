@@ -11,6 +11,13 @@
     <Description>eventbus base</Description>
     <PackageTags>nucleo;eventbus</PackageTags>
     <RepositoryUrl>https://github.com/abdulhamit-dev/nucleo-framework/tree/main/Nucleo.EventBus</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include=".\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 </Project>
