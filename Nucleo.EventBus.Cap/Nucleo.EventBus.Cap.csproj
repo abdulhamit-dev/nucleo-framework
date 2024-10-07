@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>8.0.4</Version>
+    <Version>8.0.5</Version>
     <PackageId>Nucleo.EventBus.Cap</PackageId>
     <Authors>hamit</Authors>
     <Company>hamit</Company>
@@ -19,7 +19,7 @@
     <PackageReference Include="DotNetCore.CAP.Dashboard" Version="8.2.0" />
     <PackageReference Include="DotNetCore.CAP.MongoDB" Version="8.2.0" />
     <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="8.2.0" />
-    <PackageReference Include="Nucleo.EventBus" Version="8.0.0" />
+    <PackageReference Include="Nucleo.EventBus" Version="8.0.1" />
     <None Include=".\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
