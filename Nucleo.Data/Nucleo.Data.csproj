@@ -1,9 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>8.0.0</Version>
+    <PackageId>Nucleo.Data</PackageId>
+    <Authors>hamit</Authors>
+    <Company>hamit</Company>
+    <Description>data</Description>
+    <PackageTags>nucleo;data</PackageTags>
+    <RepositoryUrl>https://github.com/abdulhamit-dev/nucleo-framework/tree/main/Nucleo.Data</RepositoryUrl>
   </PropertyGroup>
+
 
 </Project>
