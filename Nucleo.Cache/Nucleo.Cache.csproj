@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>8.0.0</Version>
+    <Version>8.0.1</Version>
     <PackageId>Nucleo.Cache</PackageId>
     <Authors>hamit</Authors>
     <Company>hamit</Company>
@@ -13,7 +13,7 @@
     <RepositoryUrl>https://github.com/abdulhamit-dev/nucleo-framework/tree/main/Nucleo.Cache</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <None Include=".\README.md">
       <Pack>True</Pack>
