@@ -11,6 +11,14 @@
     <Description>cache</Description>
     <PackageTags>nucleo;cache</PackageTags>
     <RepositoryUrl>https://github.com/abdulhamit-dev/nucleo-framework/tree/main/Nucleo.Cache</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include=".\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

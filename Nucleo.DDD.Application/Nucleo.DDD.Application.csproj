@@ -11,6 +11,7 @@
     <Description>application</Description>
     <PackageTags>nucleo;application</PackageTags>
     <RepositoryUrl>https://github.com/abdulhamit-dev/nucleo-framework/tree/main/Nucleo.DDD.Application</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
     <PackageReference Include="Nucleo.DDD.CrossCuttingConcerns" Version="8.0.0" />
+    <None Include=".\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
