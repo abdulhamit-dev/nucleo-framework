@@ -22,7 +22,7 @@ public static class CapEventExtension
                 opt.Password = configuration["RabbitMQ:Password"];
             });
 
-            options.UseDashboard(opt => { opt.PathMatch = "/mycap"; });
+            options.UseDashboard(opt => { opt.PathMatch = "/cap"; });
             options.FailedRetryCount = 6;
             options.FailedRetryInterval = 60;
         });
