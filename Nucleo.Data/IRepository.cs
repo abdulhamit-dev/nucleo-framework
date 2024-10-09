@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Data
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T, TKey> where T : class, IEntityBase<TKey>
     {
-        Task<T> GetByIdAsync(int id);
+        Task<T> GetByIdAsync(TKey id);
         Task<IEnumerable<T>> GetAllAsync();
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
         Task AddAsync(T entity);
