@@ -11,7 +11,7 @@ namespace Nucleo.Data.MongoDB
             var database = client.GetDatabase(databaseName);
 
             services.AddSingleton<IMongoDatabase>(database);
-            services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
 
             return services;
         }
