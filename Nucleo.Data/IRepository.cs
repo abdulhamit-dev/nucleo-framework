@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nucleo.Data.Paging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -17,5 +18,18 @@ namespace Nucleo.Data
         Task RemoveAsync(T entity);
         Task RemoveRangeAsync(IEnumerable<T> entities);
         Task UpdateAsync(T entity);
+
+        Task<IEnumerable<T>> FindWithPagingAsync(
+        Expression<Func<T, bool>> predicate,
+        int pageIndex,
+        int pageSize,
+        Expression<Func<T, object>> orderBy = null,
+        bool isDescending = false);
+
+        Task<IEnumerable<T>> GetAllWithPagingAsync(
+            int pageIndex,
+            int pageSize,
+            Expression<Func<T, object>> orderBy = null,
+            bool isDescending = false);
     }
 }
