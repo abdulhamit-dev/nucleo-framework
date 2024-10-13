@@ -41,10 +41,11 @@ namespace Nucleo.Data.MongoDB
             return await _collection.Find(filter).FirstOrDefaultAsync();
         }
 
-        public virtual async Task<IEnumerable<T>> FindWithPagingAsync(
+        public virtual async Task<Paginate<T>> FindWithPagingAsync(
             Expression<Func<T, bool>> predicate,
             int pageIndex,
             int pageSize,
+            int from,
             Expression<Func<T, object>> orderBy = null,
             bool isDescending = false)
         {
@@ -57,15 +58,29 @@ namespace Nucleo.Data.MongoDB
                     ? query.SortByDescending(orderBy)
                     : query.SortBy(orderBy);
             }
+            
+            int totalCount = (int)await query.CountDocumentsAsync();
 
-            return await query.Skip((pageIndex - 1) * pageSize)
-                              .Limit(pageSize)
-                              .ToListAsync();
+            List<T> items = await query.Skip((pageIndex - from) * pageSize)
+                .Limit(pageSize)
+                .ToListAsync();
+            
+            Paginate<T> paginatedResult = new Paginate<T>
+            {
+                Index = pageIndex,
+                Size = pageSize,
+                Count = totalCount,
+                Items = items,
+                Pages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            };
+
+            return paginatedResult;
         }
 
-        public virtual async Task<IEnumerable<T>> GetAllWithPagingAsync(
+        public virtual async Task<Paginate<T>> GetAllWithPagingAsync(
             int pageIndex,
             int pageSize,
+            int from,
             Expression<Func<T, object>> orderBy = null,
             bool isDescending = false)
         {
@@ -77,10 +92,23 @@ namespace Nucleo.Data.MongoDB
                     ? query.SortByDescending(orderBy)
                     : query.SortBy(orderBy);
             }
+            
+            int totalCount = (int)await query.CountDocumentsAsync();
 
-            return await query.Skip((pageIndex - 1) * pageSize)
-                              .Limit(pageSize)
-                              .ToListAsync();
+            List<T> items = await query.Skip((pageIndex - from) * pageSize)
+                .Limit(pageSize)
+                .ToListAsync();
+            
+            Paginate<T> paginatedResult = new Paginate<T>
+            {
+                Index = pageIndex,
+                Size = pageSize,
+                Count = totalCount,
+                Items = items,
+                Pages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            };
+
+            return paginatedResult;
         }
 
         public virtual async Task RemoveAsync(T entity)
