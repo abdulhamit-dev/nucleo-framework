@@ -27,4 +27,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nucleo.Data\Nucleo.Data.csproj" />
+  </ItemGroup>
+
 </Project>
