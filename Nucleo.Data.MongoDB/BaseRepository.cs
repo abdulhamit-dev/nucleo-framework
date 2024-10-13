@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using Nucleo.Data.Paging;
 using System.Linq.Expressions;
 
 namespace Nucleo.Data.MongoDB
@@ -38,6 +39,48 @@ namespace Nucleo.Data.MongoDB
         {
             var filter = Builders<T>.Filter.Eq(e => e.Id, id);
             return await _collection.Find(filter).FirstOrDefaultAsync();
+        }
+
+        public virtual async Task<IEnumerable<T>> FindWithPagingAsync(
+            Expression<Func<T, bool>> predicate,
+            int pageIndex,
+            int pageSize,
+            Expression<Func<T, object>> orderBy = null,
+            bool isDescending = false)
+        {
+            var filter = Builders<T>.Filter.Where(predicate);
+            var query = _collection.Find(filter);
+
+            if (orderBy != null)
+            {
+                query = isDescending
+                    ? query.SortByDescending(orderBy)
+                    : query.SortBy(orderBy);
+            }
+
+            return await query.Skip((pageIndex - 1) * pageSize)
+                              .Limit(pageSize)
+                              .ToListAsync();
+        }
+
+        public virtual async Task<IEnumerable<T>> GetAllWithPagingAsync(
+            int pageIndex,
+            int pageSize,
+            Expression<Func<T, object>> orderBy = null,
+            bool isDescending = false)
+        {
+            var query = _collection.Find(e => !e.IsDeleted);
+
+            if (orderBy != null)
+            {
+                query = isDescending
+                    ? query.SortByDescending(orderBy)
+                    : query.SortBy(orderBy);
+            }
+
+            return await query.Skip((pageIndex - 1) * pageSize)
+                              .Limit(pageSize)
+                              .ToListAsync();
         }
 
         public virtual async Task RemoveAsync(T entity)
