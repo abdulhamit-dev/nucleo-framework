@@ -19,16 +19,18 @@ namespace Nucleo.Data
         Task RemoveRangeAsync(IEnumerable<T> entities);
         Task UpdateAsync(T entity);
 
-        Task<IEnumerable<T>> FindWithPagingAsync(
+        Task<Paginate<T>> FindWithPagingAsync(
         Expression<Func<T, bool>> predicate,
-        int pageIndex,
-        int pageSize,
+        int pageIndex=0,
+        int pageSize=10,
+        int from=0,
         Expression<Func<T, object>> orderBy = null,
         bool isDescending = false);
 
-        Task<IEnumerable<T>> GetAllWithPagingAsync(
-            int pageIndex,
-            int pageSize,
+        Task<Paginate<T>> GetAllWithPagingAsync(
+            int pageIndex=0,
+            int pageSize=10,
+            int from=0,
             Expression<Func<T, object>> orderBy = null,
             bool isDescending = false);
     }
